@@ -15500,6 +15500,7 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('DOMContentLoaded', function () {
   Object(_modules_modals__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('.glazing_slider', '.glazing_block', '.glazing_content', 'active');
+  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('.decoration_slider', '.no_click', '.decoration_content > div > div', 'after_click');
 });
 
 /***/ }),
@@ -15578,11 +15579,10 @@ __webpack_require__.r(__webpack_exports__);
 var tabs = function tabs(headerSelector, tabSelector, contentSelector, activeClass) {
   var header = document.querySelector(headerSelector),
       tabs = document.querySelectorAll(tabSelector),
-      content = document.querySelector(contentSelector);
+      content = document.querySelectorAll(contentSelector);
 
   function hideContent() {
     content.forEach(function (item) {
-      console.log(item);
       item.style.display = 'none';
     });
     tabs.forEach(function (tab) {

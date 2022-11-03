@@ -1,10 +1,10 @@
 const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
   const header = document.querySelector(headerSelector),
     tabs = document.querySelectorAll(tabSelector),
-    content = document.querySelector(contentSelector)
-  function hideContent() {
+    content = document.querySelectorAll(contentSelector)
+  
+    function hideContent() {
     content.forEach(item => {
-      console.log(item)
       item.style.display = 'none'
     })
 

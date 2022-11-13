@@ -48,10 +48,16 @@ const forms = () => {
           clearInputs()
           setTimeout(function () {
             statusMessage.remove()
-          }, 5000)
+          }, 4000)
+          closeModalAfterPostData()
         })
     })
+    function closeModalAfterPostData() {
+      setTimeout(function () {
+        const finalModal = document.querySelector('.popup_calc_end')
+        finalModal.style.display = 'none'  
+      }, 5000)
+    }
   })
 }
-
 export default forms
